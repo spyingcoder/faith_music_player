@@ -14,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 6),
+      const Duration(seconds: 7),
       () => Navigator.pushNamed(context, '/'),
     );
   }
@@ -26,6 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
         children: [
           Container(
             height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
             color: Colors.white,
             child: Image.asset(
               "assets/images/logo.png",
