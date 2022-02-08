@@ -20,18 +20,14 @@ class MenuDrawer extends StatelessWidget {
             title: const Text('Item 1'),
             onTap: () {
               // Navigator.of(context).pop();
-              //       Navigator.of(context).push(
-              //         MaterialPageRoute(builder: (context) => screen),
-              //       );
+              //       Navigator.of(context).pushnamed('');
             },
           ),
           ListTile(
             title: const Text('Item 2'),
             onTap: () {
-              // Navigator.of(context).pop();
-              //       Navigator.of(context).push(
-              //         MaterialPageRoute(builder: (context) => screen),
-              //       );
+           // Navigator.of(context).pop();
+              //       Navigator.of(context).pushnamed('');
             },
           ),
         ],

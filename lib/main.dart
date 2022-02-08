@@ -7,10 +7,16 @@ void main() {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          elevation: 0,
+          color: Colors.transparent,
+        )
+      ),
       routes: {
         '/': (context) => Home(),
         '/splash': (context) => SplashScreen(),
-        // '/songWidget': (context) => SongWidget(),
+        '/musicScreen': (context) => MusicScreen(),
       },
       initialRoute: '/splash',
     ),

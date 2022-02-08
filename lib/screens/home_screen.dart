@@ -1,10 +1,6 @@
 import 'package:faith_music_player/shared/menu_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-//Audio packages ------------------------------------------------VVVV>
-import 'package:flutter_audio_query/flutter_audio_query.dart';
-import 'package:audio_manager/audio_manager.dart';
-//Audio packages ------------------------------------------------^^^^>
 
 class Home extends StatefulWidget {
   const Home({Key key}) : super(key: key);
@@ -28,7 +24,7 @@ class _HomeState extends State<Home> {
       floatingActionButton: Center(
         child: FloatingActionButton(
           onPressed: () {
-            Navigator.of(context).pushNamed('/');
+            Navigator.of(context).pushNamed('/musicScreen');
           },
           child: Icon(Icons.arrow_forward_ios),
         ),

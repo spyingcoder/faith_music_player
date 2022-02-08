@@ -11,18 +11,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_audio_query: "^0.3.5+6"
-  # A Flutter plugin, Android only at this moment, that allows you query for audio 
-  # metadata info about artists, albums, songs audio files and genres available on
-  #  device storage. All work is made using Android native MediaStore API with 
-  #  ContentResolver API and query methods run in background thread
-  audio_manager: ^0.8.2
-  #A flutter plugin for music playback, including notification handling.
 
   cupertino_icons: ^1.0.2
-  splashscreen: 
   font_awesome_flutter:
   animated_text_kit: ^4.2.1
+  audioplayers: ^0.16.1
 
 dev_dependencies:
   flutter_test:
@@ -36,6 +29,7 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/sound_test.mp3
 
 
   # fonts:
