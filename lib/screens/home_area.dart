@@ -11,17 +11,22 @@ class HomeArea extends StatefulWidget {
 class _HomeAreaState extends State<HomeArea> {
   @override
   Widget build(BuildContext context) {
+    var song = "My Life is Going On";
+    var artist = "Cecilia Krull";
+    // var fixedHeight = MediaQuery.of(context).size.height * 0.75;
+    var fixedWidth = MediaQuery.of(context).size.width * 0.75;
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const SizedBox(
-          height: 12.0,
+          height: 20.0,
         ),
         Center(
           child: Container(
-            width: 280.0,
-            height: 280.0,
+            width: fixedWidth,
+            height: fixedWidth,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               image: const DecorationImage(
@@ -33,15 +38,25 @@ class _HomeAreaState extends State<HomeArea> {
         const SizedBox(
           height: 12.0,
         ),
-        const Center(
-          child: Text(
-            "La Casa De Papel - Sound Track",
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w600,
-              fontSize: 20,
+        Column(
+          children: [
+            Text(
+              song,
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w600,
+                fontSize: 25,
+              ),
             ),
-          ),
+            Text(
+              artist,
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w600,
+                fontSize: 15,
+              ),
+            ),
+          ],
         ),
         const SizedBox(
           height: 12.0,

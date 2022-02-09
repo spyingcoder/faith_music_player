@@ -77,9 +77,9 @@ class _MiniPlayerState extends State<MiniPlayer> {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        decoration: const BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
+        decoration: BoxDecoration(
+          color: Colors.blue[50],
+          borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(30.0),
             topRight: Radius.circular(30.0),
           ),
@@ -88,7 +88,7 @@ class _MiniPlayerState extends State<MiniPlayer> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: 500.0,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -96,12 +96,12 @@ class _MiniPlayerState extends State<MiniPlayer> {
                 children: [
                   Text(
                     '${position.inMinutes}:${position.inSeconds.remainder(60)}',
-                    style: TextStyle(fontSize: 18.0),
+                    style: const TextStyle(fontSize: 18.0),
                   ),
                   slider(),
                   Text(
                     '${musicLength.inMinutes}:${musicLength.inSeconds.remainder(60)}',
-                    style: TextStyle(fontSize: 18.0),
+                    style: const TextStyle(fontSize: 18.0),
                   ),
                 ],
               ),
