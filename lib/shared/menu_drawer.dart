@@ -14,20 +14,22 @@ class MenuDrawer extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.brown[100],
             ),
-            child: const Text('Faith Music Player', ),
+            child: const Text(
+              'Faith Music Player',
+            ),
           ),
           ListTile(
-            title: const Text('Item 1'),
+            title: const Text('Music Player'),
             onTap: () {
               // Navigator.of(context).pop();
-              //       Navigator.of(context).pushnamed('');
+              // Navigator.pushNamed(context, '/musicScreen');
             },
           ),
           ListTile(
-            title: const Text('Item 2'),
+            title: const Text('Camera'),
             onTap: () {
-           // Navigator.of(context).pop();
-              //       Navigator.of(context).pushnamed('');
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/cameraScreen');
             },
           ),
         ],
