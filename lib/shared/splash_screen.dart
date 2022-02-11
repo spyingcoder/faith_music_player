@@ -34,9 +34,8 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
           Container(
-            margin: EdgeInsets.only(
-                top: (MediaQuery.of(context).size.height) - 100,
-                left: (MediaQuery.of(context).size.width * 0.25)),
+            alignment: Alignment.bottomCenter,
+            margin: const EdgeInsets.only(bottom: 75.0),
             child: AnimatedTextKit(
               animatedTexts: [
                 TypewriterAnimatedText(
