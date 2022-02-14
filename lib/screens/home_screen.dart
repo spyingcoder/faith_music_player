@@ -1,6 +1,6 @@
 import 'package:faith_music_player/screens/home_area.dart';
+import 'package:faith_music_player/screens/music_list.dart';
 import 'package:flutter/material.dart';
-
 class Home extends StatefulWidget {
   const Home({Key key}) : super(key: key);
 
@@ -9,6 +9,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  @override
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -92,7 +94,7 @@ class _HomeState extends State<Home> {
                 Icon(Icons.search, size: 350),
 
                 //child - 2 Music List available in device
-                Icon(Icons.library_music, size: 350),
+                MusicList(),
 
                 //child - 3 HOME AREA or NOW PLAYING
                 HomeArea(),

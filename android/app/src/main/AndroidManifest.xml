@@ -2,14 +2,12 @@
     package="com.example.faith_music_player">
 
 <!-- ADDING PERMISSSIONS -->
-    <uses-permission  android:name="android.permission.INTERNET"/>
-    <uses-permission  android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+<!-- ADDED PERMISSSIONS --> 
 
-<!-- ADDING PERMISSSIONS --> 
    <application
-        android:label="faith_music_player"
+        android:label="Faith Music Player"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -20,7 +18,8 @@
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:usesCleartextTraffic="true"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize"
+            android:requestLegacyExternalStorage="true">
             <!-- Specifies an Android theme to apply to this Activity as soon as
                  the Android process has started. This theme is visible to the user
                  while the Flutter UI initializes. After that, this theme continues
