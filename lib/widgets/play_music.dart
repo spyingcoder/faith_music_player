@@ -3,7 +3,7 @@ import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 class MiniPlayer extends StatefulWidget {
-  const MiniPlayer() : super();
+    MiniPlayer() : super();
 
   @override
   _MiniPlayerState createState() => _MiniPlayerState();

@@ -46,6 +46,8 @@ class _MusicListState extends State<MusicList> {
         }
         return ListView.builder(
           itemBuilder: (context, index) => ListTile(
+            // leading: const Icon(Icons.music_note),
+
             leading: QueryArtworkWidget(
                 id: item.data[index].id, type: ArtworkType.AUDIO),
             title: Text(item.data[index].displayNameWOExt),
@@ -55,7 +57,6 @@ class _MusicListState extends State<MusicList> {
           itemCount: item.data.length,
         );
         //
-      
       },
     );
   }

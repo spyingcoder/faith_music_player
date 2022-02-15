@@ -76,10 +76,10 @@ class _HomeAreaState extends State<HomeArea> {
             ),
           ],
         ),
-        const SizedBox(
+         SizedBox(
           height: 12.0,
         ),
-        const MiniPlayer(), //////Player Area
+         MiniPlayer(), //////Player Area
       ],
     );
   }
