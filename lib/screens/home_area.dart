@@ -9,10 +9,9 @@ class HomeArea extends StatefulWidget {
 }
 
 class _HomeAreaState extends State<HomeArea> {
-  String song =
-      "La Casa De Papel SoundTrack - My Life is going on"; //Need to Prevent its overflow
+  bool valueFromGesture = false;
+  String song = "La Casa De Papel SoundTrack - My Life is going on";
   String artist = "Cecilia Krull";
-  MiniPlayer miniPlayerState = const MiniPlayer();
   @override
   Widget build(BuildContext context) {
     var fixedHeight = MediaQuery.of(context).size.height * 0.10;
@@ -27,27 +26,10 @@ class _HomeAreaState extends State<HomeArea> {
         ),
         Center(
           child: GestureDetector(
-            // onTap: miniPlayerState.playPause,
-            ////
-            ////
-
-            // if (!playing) {
-            //         //here I'll play the song
-            //         cache.play('sound_test.mp3');
-            //         setState(() {
-            //           playBtn = Icons.pause;
-            //           playing = true;
-            //         });
-            //       } else {
-            //         _player.pause();
-            //         setState(() {
-            //           playBtn = Icons.play_arrow;
-            //           playing = false;
-            //         });
-            //       }
-
-            ////
-            ////
+            onTap: () {
+              // PlayButton().playPause(valueFromGesture);
+              // miniPlayerState.playPause;
+            },
             child: Container(
               width: fixedWidth,
               height: fixedWidth,

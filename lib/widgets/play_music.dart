@@ -3,7 +3,7 @@ import 'package:audioplayers/audio_cache.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 class MiniPlayer extends StatefulWidget {
-  const MiniPlayer({Key key}) : super(key: key);
+  const MiniPlayer() : super();
 
   @override
   _MiniPlayerState createState() => _MiniPlayerState();
@@ -28,7 +28,7 @@ class _MiniPlayerState extends State<MiniPlayer> {
     return SizedBox(
       width: (MediaQuery.of(context).size.width) * 0.75,
       child: Slider.adaptive(
-        activeColor: Colors.black,
+        activeColor: Colors.white,
         inactiveColor: Colors.blueGrey[300],
         value: position.inSeconds.toDouble(),
         max: musicLength.inSeconds.toDouble(),
@@ -46,6 +46,7 @@ class _MiniPlayerState extends State<MiniPlayer> {
 
 //////////////////////////////////////////////////////////////
 //////////////////////----------MUSIC PLAYER FUNCTIONS STARTS
+
   @override
   void initState() {
     super.initState();
@@ -60,6 +61,7 @@ class _MiniPlayerState extends State<MiniPlayer> {
       });
     };
 
+
 //this will help in moving the cursor while playing the music, asli masale sach sach
     // ignore: deprecated_member_use
     _player.positionHandler = (p) {
@@ -69,11 +71,9 @@ class _MiniPlayerState extends State<MiniPlayer> {
     };
 
     cache.load("sound_test.mp3");
-    //no need to specify the full path here, just put the music file in asset folder - best practice
+    //no need to specify the full path here, just put the music file in asset folder - best practice noted
   }
 
-//////////////////////----------MUSIC PLAYER FUNCTIONS ENDS
-//////////////////////////////////////////////////////////////
 
   void playPause() {
     if (!playing) {
@@ -91,6 +91,10 @@ class _MiniPlayerState extends State<MiniPlayer> {
       });
     }
   }
+
+
+//////////////////////----------MUSIC PLAYER FUNCTIONS ENDS
+//////////////////////////////////////////////////////////////
 
   @override
   Widget build(BuildContext context) {
@@ -166,6 +170,20 @@ class _MiniPlayerState extends State<MiniPlayer> {
                     iconSize: 50.0,
                     // color: Colors.blue[800],
                     onPressed: playPause,
+                    // () {
+                    //   if (PlayButton().playPause(playing) == true) {
+                    //     cache.play('sound_test.mp3');
+                    //     setState(() {
+                    //       playing = true;
+                    //       playBtn = Icons.pause;
+                    //     });
+                    //   } else {
+                    //     setState(() {
+                    //       playing = false;
+                    //       playBtn = Icons.play_arrow;
+                    //     });
+                    //   }
+                    // },
                     icon: Icon(playBtn),
                     color: Colors.white,
                   ),
@@ -203,3 +221,15 @@ class _MiniPlayerState extends State<MiniPlayer> {
     );
   }
 }
+
+// class PlayButton {
+//   bool playPause(bool isPlaying) {
+//     if (!isPlaying) {
+//       isPlaying = true;
+//       return isPlaying;
+//     } else {
+//       isPlaying = false;
+//       return isPlaying;
+//     }
+//   }
+// }

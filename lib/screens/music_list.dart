@@ -1,16 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:on_audio_query/on_audio_query.dart'; //for using song model
+import 'package:permission_handler/permission_handler.dart';
+
 
 class MusicList extends StatefulWidget {
   const MusicList({Key key}) : super(key: key);
+
 
   @override
   _MusicListState createState() => _MusicListState();
 }
 
 class _MusicListState extends State<MusicList> {
+  @override
+  void initState() {
+    super.initState();
+    requestPermission();
+  }
+
+  void requestPermission() {
+     Permission.storage.request();
+     //
+  }
 //
-  final _audioQuery =  OnAudioQuery();
+  final _audioQuery = OnAudioQuery();
 //
 
   @override
@@ -28,19 +41,21 @@ class _MusicListState extends State<MusicList> {
             child: CircularProgressIndicator(),
           );
         }
-        if(item.data.isEmpty){
+        if (item.data.isEmpty) {
           return const Center(child: Text("No Songs found!"));
         }
-        return  ListView.builder(
-        itemBuilder: (context, index) => ListTile(
-          leading: const Icon(Icons.music_note),
-          title: Text(item.data[index].displayNameWOExt),
-          subtitle: Text(item.data[index].artist),
-          trailing: const Icon(Icons.more_horiz),
-        ),
-        itemCount: item.data.length,
-      );
-    //
+        return ListView.builder(
+          itemBuilder: (context, index) => ListTile(
+            leading: QueryArtworkWidget(
+                id: item.data[index].id, type: ArtworkType.AUDIO),
+            title: Text(item.data[index].displayNameWOExt),
+            subtitle: Text(item.data[index].artist),
+            trailing: const Icon(Icons.more_horiz),
+          ),
+          itemCount: item.data.length,
+        );
+        //
+      
       },
     );
   }

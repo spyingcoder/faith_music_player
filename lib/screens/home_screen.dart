@@ -1,6 +1,8 @@
 import 'package:faith_music_player/screens/home_area.dart';
 import 'package:faith_music_player/screens/music_list.dart';
+import 'package:faith_music_player/screens/playlist_area.dart';
 import 'package:flutter/material.dart';
+
 class Home extends StatefulWidget {
   const Home({Key key}) : super(key: key);
 
@@ -9,8 +11,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  @override
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -82,6 +82,7 @@ class _HomeState extends State<Home> {
               ),
             ),
             child: const TabBarView(
+              //
               children: [
                 //  5
                 //  Child
@@ -100,11 +101,13 @@ class _HomeState extends State<Home> {
                 HomeArea(),
 
                 //child - 4 Music in Current Playlist
-                Icon(Icons.queue_music_rounded, size: 350),
+                // Icon(Icons.queue_music_rounded, size: 350),
+                Playlist(),
 
                 //child - 5 Settings
                 Icon(Icons.settings, size: 350),
               ],
+              //
             ),
           ),
         ),
