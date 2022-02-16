@@ -266,8 +266,8 @@ class _HomeAreaState extends State<HomeArea> {
         Center(
           child: GestureDetector(
             onTap: () {
-              print("PRINT ONTAP");
-              playPause(); // PlayButton().playPause(valueFromGesture);
+              // print("PRINT ONTAP");
+                            playPause(); // PlayButton().playPause(valueFromGesture);
               // miniPlayerState.playPause;
             },
             //

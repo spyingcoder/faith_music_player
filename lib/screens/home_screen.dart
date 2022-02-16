@@ -90,7 +90,6 @@ class _HomeState extends State<Home> {
                 //  Be
                 //  Required
                 //
-
                 //child - 1 Search Area
                 Icon(Icons.search, size: 350),
 
